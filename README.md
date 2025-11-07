@@ -28,6 +28,34 @@ go version go1.23.3 windows/amd64
 
 ### 2️⃣ 소스코드 빌드
 
+소스코드에는 `github.com/gorilla/websocket` 패키지가 사용됩니다.
+빌드하기 전에 이 패키지를 설치해야 합니다.
+
+✅ Go Modules 초기화
+
+먼저 프로젝트 루트 디렉터리에서 모듈을 초기화합니다.
+```bash
+go mod init relay
+```
+
+✅ 외부 패키지 설치
+
+이후 필요한 의존성을 자동으로 다운로드합니다.
+```bash
+go get github.com/gorilla/websocket
+```
+
+또는 모든 import를 기반으로 한꺼번에 정리하려면:
+```bash
+go mod tidy
+```
+
+이 명령은 `go.mod`와 `go.sum` 파일을 자동으로 업데이트합니다.
+
+---
+
+### 3️⃣ 소스코드 빌드
+
 다운로드받은 소스코드 폴더에서 마우스 오른쪽 클릭 후  
 **“터미널에서 열기(T)”** 를 선택해 해당 경로에서 콘솔을 엽니다.
 
@@ -41,7 +69,7 @@ go build -o relay.exe
 
 ---
 
-### 3️⃣ 프로그램 실행
+### 4️⃣ 프로그램 실행
 
 생성된 **`relay.exe`** 파일을 더블 클릭하거나,  
 콘솔(Command Prompt)에서 직접 실행할 수 있습니다.
