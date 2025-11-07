@@ -26,7 +26,7 @@ go version go1.23.3 windows/amd64
 
 ---
 
-### 2️⃣ 소스코드 빌드
+### 2️⃣ 의존성 설치
 
 소스코드에는 `github.com/gorilla/websocket` 패키지가 사용됩니다.
 빌드하기 전에 이 패키지를 설치해야 합니다.
